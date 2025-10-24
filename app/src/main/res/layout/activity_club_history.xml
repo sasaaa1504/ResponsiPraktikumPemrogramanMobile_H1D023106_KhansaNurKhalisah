@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    tools:context=".ClubHistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_history_banner"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_histori" />
+
+        <TextView
+            android:id="@+id/tv_history_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Toulouse FC"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/tv_history_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:lineSpacingMultiplier="1.3"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:text="Toulouse FC adalah klub sepak bola profesional asal kota Toulouse, Prancis, yang berdiri pada tahun 1937 dan bermarkas di Stadium de Toulouse dengan kapasitas lebih dari 33.000 penonton. Dikenal dengan julukan “Les Violets” karena warna khas seragam ungunya, klub ini memiliki sejarah panjang dalam sepak bola Prancis dan dikenal sebagai tim yang mengandalkan talenta muda serta memainkan gaya permainan menyerang. Setelah sempat dibubarkan pada tahun 1967 dan dibentuk kembali pada 1970, Toulouse FC berhasil kembali ke Ligue 1 dan menjadi salah satu klub yang konsisten bersaing di kasta tertinggi sepak bola Prancis. Prestasi terbaik mereka termasuk menjuarai Coupe de France musim 2022–2023 dan berpartisipasi di kompetisi **UEFA Europa League. Dengan semangat modern dan dukungan fanatik dari masyarakat lokal, Toulouse FC terus berkembang sebagai simbol kebanggaan kota Toulouse.
+" />
+
+    </LinearLayout>
+</ScrollView>

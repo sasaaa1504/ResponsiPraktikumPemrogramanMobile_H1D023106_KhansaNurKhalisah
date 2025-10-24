@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFF7EE"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- Banner Stadion -->
+        <ImageView
+            android:id="@+id/img_banner"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Logo Klub -->
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ikon_logo"
+            android:layout_marginTop="-60dp"
+            android:elevation="8dp"
+            android:background="@drawable/bg_white_circle"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/img_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Nama Klub -->
+        <TextView
+            android:id="@+id/tv_club_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toulouse FC"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/img_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Deskripsi Klub -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FDEDEC"
+            app:layout_constraintTop_toBottomOf="@id/tv_club_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.2"
+                android:justificationMode="inter_word"
+                android:text="Toulouse FC adalah klub sepak bola profesional asal kota Toulouse, Prancis, yang berdiri pada tahun 1937 dan bermarkas di Stadium de Toulouse. Dikenal dengan julukan “Les Violets” karena warna khas seragam ungunya, klub ini memiliki sejarah panjang dalam sepak bola Prancis dan dikenal mengandalkan talenta muda serta memainkan gaya permainan menyerang. Toulouse FC menjuarai Coupe de France musim 2022–2023 dan menjadi salah satu kebanggaan kota Toulouse." />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Menu Section -->
+        <LinearLayout
+            android:id="@+id/menu_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="12dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/card_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <include
+                android:id="@+id/menu_history"
+                layout="@layout/item_menu" />
+
+            <include
+                android:id="@+id/menu_coach"
+                layout="@layout/item_menu" />
+
+            <include
+                android:id="@+id/menu_squad"
+                layout="@layout/item_menu" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
