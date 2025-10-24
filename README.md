@@ -5,7 +5,7 @@
 - **Nama:** Khansa Nur Khalisah  
 - **NIM:** H1D023106  
 - **Shift Asal:** B
-- **Shift Baru:** F
+- **Shift Baru:** E
 
 ---
 
