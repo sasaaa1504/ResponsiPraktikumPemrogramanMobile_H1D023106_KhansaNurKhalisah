@@ -44,7 +44,9 @@ Aplikasi dikembangkan menggunakan **Kotlin**, dan mengimplementasikan berbagai k
 ---
 
 ## 🎬 Demo Aplikasi
-[Klik di sini untuk melihat repository dan video demo aplikasi](https://github.com/sasaaa1504/ResponsiPraktikumPemrogramanMobile_H1D023106_KhansaNurKhalisah.git)
+## 🎬 Demo Aplikasi
+[⬇️ Download atau Tonton Video Demo](https://github.com/sasaaa1504/ResponsiPraktikumPemrogramanMobile_H1D023106_KhansaNurKhalisah/raw/master/app/video/demo.mp4)
+
 
 
 ---
