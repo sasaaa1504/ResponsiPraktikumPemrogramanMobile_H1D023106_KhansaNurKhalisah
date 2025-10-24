@@ -44,9 +44,8 @@ Aplikasi dikembangkan menggunakan **Kotlin**, dan mengimplementasikan berbagai k
 ---
 
 ## 🎬 Demo Aplikasi
-## 🎬 Demo Aplikasi
-## 🎬 Demo Aplikasi
 [🎥 Tonton atau Unduh Video Demo](https://github.com/sasaaa1504/ResponsiPraktikumPemrogramanMobile_H1D023106_KhansaNurKhalisah/raw/main/demo.mp4)
+
 
 
 
@@ -68,9 +67,3 @@ Aplikasi dikembangkan menggunakan **Kotlin**, dan mengimplementasikan berbagai k
 Klub ini bermarkas di **Stadium de Toulouse** dan dikenal dengan warna ungu khasnya.  
 Saat ini Toulouse FC berkompetisi di **Ligue 1** dan memiliki basis penggemar yang kuat di wilayah selatan Prancis.
 
----
-
-
-
-### ✨ Dibuat dengan ❤️ oleh  
-**Khansa Nur Khalisah – Informatika, Universitas Jenderal Soedirman**
