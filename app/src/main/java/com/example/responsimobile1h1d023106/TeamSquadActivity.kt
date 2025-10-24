@@ -4,17 +4,17 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.responsimobile1h1d023106.data.model.Player // Import model
-import com.example.responsimobile1h1d023106.databinding.ActivityTeamSquadBinding // Import ViewBinding
-import com.example.responsimobile1h1d023106.ui.adapter.PlayerAdapter // Import Adapter
-import com.example.responsimobile1h1d023106.ui.fragment.PlayerDetailFragment // Import Fragment
-import com.example.responsimobile1h1d023106.ui.viewmodel.TeamViewModel // Import ViewModel
+import com.example.responsimobile1h1d023106.data.model.Player
+import com.example.responsimobile1h1d023106.databinding.ActivityTeamSquadBinding
+import com.example.responsimobile1h1d023106.ui.adapter.PlayerAdapter
+import com.example.responsimobile1h1d023106.ui.fragment.PlayerDetailFragment
+import com.example.responsimobile1h1d023106.ui.viewmodel.TeamViewModel
 
 class TeamSquadActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTeamSquadBinding
-    private val viewModel: TeamViewModel by viewModels() // Panggil ViewModel
-    private lateinit var playerAdapter: PlayerAdapter // Deklarasi Adapter
+    private val viewModel: TeamViewModel by viewModels()
+    private lateinit var playerAdapter: PlayerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,36 +24,35 @@ class TeamSquadActivity : AppCompatActivity() {
         supportActionBar?.title = "Team Squad"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // Siapkan RecyclerView
+
         setupRecyclerView()
-        // Amati data dari ViewModel
+
         observeViewModel()
-        // Minta data ke ViewModel
+
         viewModel.fetchData()
     }
 
     private fun setupRecyclerView() {
-        // Buat instance Adapter, berikan list kosong awal
-        // dan berikan aksi (lambda) saat item diklik (P4 - Tahap I.f)
+
         playerAdapter = PlayerAdapter(emptyList()) { clickedPlayer ->
-            // Panggil fungsi untuk menampilkan detail pemain
+
             showPlayerDetailFragment(clickedPlayer)
         }
 
-        // Pasang Adapter dan LayoutManager ke RecyclerView (P3)
+
         binding.recyclerViewSquad.apply {
             adapter = playerAdapter
-            // Tampilkan item secara vertikal
+
             layoutManager = LinearLayoutManager(this@TeamSquadActivity)
         }
     }
 
     private fun observeViewModel() {
-        // Amati teamData dari ViewModel
+
         viewModel.teamData.observe(this) { teamResponse ->
-            // Ambil daftar pemain (squad) dari data, jika null beri list kosong
+
             val players = teamResponse?.squad ?: emptyList()
-            // Update data di Adapter
+
             playerAdapter.updateData(players)
         }
     }
